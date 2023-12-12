@@ -101,10 +101,9 @@ class OttoLexicalAnalyzer():
     def _tokenize(self, file):
         with open(file, "r") as otto_file:
             char_list = [[char for char in word if char] for word in otto_file.readlines()]
-        # self._identify_chars(self._get_chars(char_list))
-        print(self._get_chars(char_list))
+        self._identify_chars(self._get_chars(char_list))
         
-        # for token in self.output:
-        #     print(token)
+        for token in self.output:
+            print(token)
 
 OttoLexicalAnalyzer(r'chicken.otto')
