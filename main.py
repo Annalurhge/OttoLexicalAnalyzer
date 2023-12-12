@@ -45,9 +45,12 @@ class OttoLexicalAnalyzer():
     def _check_type(self, char):
         if char in ARITH_OPS:
             return "ARITH_OPS"
-            
+        
         if char in STRING:
             return "STRING_LIT"
+        
+        if char in ASS_OPS:
+            return "ASS_OPS"
         
         if char.isalpha():
             return "ALPHA"
@@ -74,16 +77,14 @@ class OttoLexicalAnalyzer():
                     
                 if prev_char == "":
                     prev_char += char
-                
-                if quote_count % 2 == 1:
-                    empty_string += char
                     
+                if quote_count % 2 == 1 and prev_char != "=":
+                    empty_string += char
                 elif quote_count % 2 == 0 and closing_quote != "":
                     empty_string += char
                     to_return.append([empty_string])
                     closing_quote = ""
                     empty_string = ""
-                    
                 elif self._check_type(prev_char) == self._check_type(char):
                     prev_char = f"{char}"
                     empty_string += char
