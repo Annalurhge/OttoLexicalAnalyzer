@@ -1,0 +1,36 @@
+PLUS = "+"
+MINUS = "-"
+MULTIPLY = "*"
+DIVIDE = "/"
+MODULUS = "%"
+EXPO = "**"
+FLOOR_DIV = "//"
+ARITH_OPS = [PLUS, MINUS, DIVIDE, MULTIPLY, MODULUS, EXPO, FLOOR_DIV]
+
+
+EQUALS = "="
+PLUS_EQ = "+="
+MINUS_EQ = "-="
+MULT_EQ = "*="
+DIV_EQ = "/="
+MOD_EQ = "%="
+FLOOR_DIV_EQ = "//="
+EXPO_EQ = "**="
+ASS_OPS = [EQUALS, PLUS_EQ, MINUS_EQ, MULT_EQ, DIV_EQ, MOD_EQ, FLOOR_DIV_EQ, EXPO_EQ]
+
+
+IS_EQUAL = "=="
+NOT_EQUAL = "!="
+GREATER_THAN = ">"
+LESSER_THAN = "<"
+GREATER_EQ = ">="
+LESSER_EQ = "<="
+COMPARISON_OPS = [IS_EQUAL, NOT_EQUAL, GREATER_THAN, LESSER_THAN, GREATER_EQ, LESSER_EQ]
+
+LIST_OF_OPS = [ARITH_OPS, ASS_OPS, COMPARISON_OPS]
+
+########################################################################################
+
+DOUBLE_QUOTES = '"'
+SINGLE_QUOTES = "'"
+STRING = [SINGLE_QUOTES, DOUBLE_QUOTES]
