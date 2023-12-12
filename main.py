@@ -40,6 +40,12 @@ class OttoLexicalAnalyzer():
                     self.output.append(self.ValidToken(token, "STRING_LIT", 0))
                     continue
                 
+                if token.isspace():
+                    self.output.append(self.ValidToken(token, "WHITESPACE", 0))
+                    
+                if token == "\n":
+                    self.output.append(self.ValidToken(token, "NEWLINE", 0))
+                
                 self.output.append(self.ValidToken(token, "UNKNOWN", 0))
 
     def _check_type(self, char):
