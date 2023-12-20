@@ -8,13 +8,13 @@ class OttoLexicalAnalyzer():
             read_file = self._tokenize(file)
     
     class ValidToken():
-            def __init__(self, lexeme, token, trail_space):
-                self.lexeme = lexeme
-                self.token = token
-                self.trail_space_count = trail_space
-            
-            def __str__(self):
-                return f"{self.lexeme} \t: \t{self.token}"
+        def __init__(self, lexeme, token, trail_space):
+            self.lexeme = lexeme
+            self.token = token
+            self.trail_space_count = trail_space
+        
+        def __str__(self):
+            return f"{self.lexeme} \t: \t{self.token}"
             
     def _check_file_extension(self, file):
         if file.lower().endswith(".otto"):
